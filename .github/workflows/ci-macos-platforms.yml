@@ -1,0 +1,60 @@
+name: macOS Tests (Platforms)
+
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches: 
+      - main
+  workflow_dispatch:
+
+jobs:
+  macos-tests:
+    name: ${{ matrix.platform }} (${{ matrix.xcode-version }}${{ matrix.experimental-build-system && ' experimental build system' || '' }}, macOS ${{ matrix.os-version }}) 
+    runs-on: macos-${{ matrix.os-version }}
+    strategy:
+      matrix:
+        os-version: 
+          - '11'
+        xcode-version: 
+          - '13.2.1'
+        experimental-build-system: 
+          - false
+          - true
+        platform:
+          - macOS
+          - Mac Catalyst
+          - iOS
+          - tvOS
+          - watchOS
+        include:
+          - platform-identifier: 'macOS'
+            platform: macOS
+          - platform-identifier: 'macOS,variant=Mac Catalyst'
+            platform: Mac Catalyst
+          - platform-identifier: 'iOS Simulator,name=iPhone 11 Pro Max'
+            platform: iOS
+          - platform-identifier: 'tvOS Simulator,name=Apple TV 4K (at 1080p) (2nd generation)'
+            platform: tvOS
+          - platform-identifier: 'watchOS Simulator,name=Apple Watch Series 5 - 44mm'
+            platform: watchOS
+    env:
+      DEVELOPER_DIR: "/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer"
+    steps:
+      - name: "⬇️ Checkout"
+        uses: actions/checkout@v2
+      - name: "⚙️ Enable Experimental Build System"
+        if: ${{ matrix.experimental-build-system }}
+        run: defaults write com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration 1
+      - name: "🛠 Build and Run Tests"
+        run: |
+          xcrun xcodebuild test \
+            -scheme BuildkiteTestAnalytics \
+            -destination platform="${{ matrix.platform-identifier }}"
+      - name: "🛠 Build Release"
+        run: |
+          xcrun xcodebuild \
+            -scheme BuildkiteTestAnalytics \
+            -configuration Release \
+            -destination platform="${{ matrix.platform-identifier }}"
