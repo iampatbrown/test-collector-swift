@@ -1,7 +1,7 @@
 @testable import DemoLibrary
 import XCTest
 
-final class DemoLibraryTests: XCTestCase {
+final class HappyTests: XCTestCase {
   func testAlwaysSucceeds() {
     XCTAssert(true)
   }
@@ -11,6 +11,16 @@ final class DemoLibraryTests: XCTestCase {
     XCTAssert(true)
   }
 
+  func testWillRunForUpTo4Seconds() {
+    self.sleep(seconds: .random(in: 1...4))
+    XCTAssert(true)
+  }
+  
+  func testWillRunForUpTo5Seconds() {
+    self.sleep(seconds: .random(in: 1...5))
+    XCTAssert(true)
+  }
+  
   func testWillBeSkipped() throws {
     throw XCTSkip("This test will be skipped")
   }
