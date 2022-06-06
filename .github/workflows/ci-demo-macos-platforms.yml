@@ -25,4 +25,4 @@ jobs:
     - name: "⬇️ Checkout"
       uses: actions/checkout@v2
     - name: "🛠 Build and Run Tests"
-      run: cd Exmples/DemoLibrary && swift test
+      run: cd Examples/DemoLibrary && swift test
