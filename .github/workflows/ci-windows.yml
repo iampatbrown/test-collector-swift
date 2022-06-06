@@ -26,7 +26,7 @@ jobs:
       uses: MaxDesiatov/swift-windows-action@v1
       with:
         swift-version: ${{ matrix.swift-version }}
-        shell-aciton: ""
+        shell-action: ""
     - name: "🛠 Build and Run Tests"
       run: swift test
     - name: "🛠 Build Release"

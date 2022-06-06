@@ -16,7 +16,7 @@ final class UploadClientTests: XCTestCase {
 
     uploadClient.waitForUploads()
 
-    self.wait(for: [uploadCompleted], timeout: 0.01)
+    self.wait(for: [uploadCompleted], timeout: 0.1)
   }
 
   func testWaitShouldTimeout() throws {
