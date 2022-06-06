@@ -3,6 +3,7 @@ struct TestIssue {
   var description: String
   var sourceCodeContext: SourceCodeContext
   var associatedError: Error?
+  var callStackSymbols: [CallStack.Symbol]?
 }
 
 extension TestIssue {

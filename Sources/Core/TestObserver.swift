@@ -52,7 +52,9 @@ class TestObserver: NSObject, XCTestObservation {
   ///
   /// Called for each test failure that occurs at any point between test case start and finish.
   func testCase(_ testCase: XCTestCase, didRecord issue: XCTIssue) {
-    self.test?.issues.append(TestIssue(issue))
+    var testIssue = TestIssue(issue)
+    testIssue.callStackSymbols = self.callStack.map { Array($0.symbols().dropFirst()) }
+    self.test?.issues.append(testIssue)
   }
   #else
   /// Notifies the observer when a test case reports a failure.

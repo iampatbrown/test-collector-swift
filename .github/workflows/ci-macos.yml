@@ -13,6 +13,7 @@ jobs:
   macos-tests:
     name: Swift ${{ matrix.swift-version }} (macOS)
     runs-on: macos-12
+    fail-fast: false
     strategy:
       matrix:
         xcode-version:

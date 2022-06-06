@@ -12,6 +12,7 @@ extension Trace {
 extension Trace.FailureExpanded {
   init(issue: TestIssue) {
     self.expanded = issue.description.components(separatedBy: "\n")
-    self.backtrace = issue.sourceCodeContext.callStack.enumerated().map { "\($0) \($1)" }
+    self.backtrace = issue.callStackSymbols?.backtrace() ?? []
+   
   }
 }
