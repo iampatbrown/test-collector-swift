@@ -13,8 +13,8 @@ jobs:
   macos-tests:
     name: ${{ matrix.platform }} (${{ matrix.xcode-version }}${{ matrix.experimental-build-system && ' experimental build system' || '' }}, macOS ${{ matrix.os-version }}) 
     runs-on: macos-${{ matrix.os-version }}
-    fail-fast: false
     strategy:
+      fail-fast: false
       matrix:
         os-version: 
           - '11'

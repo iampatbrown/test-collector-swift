@@ -13,8 +13,8 @@ jobs:
   linux-tests:
     name: Swift ${{ matrix.swift-version }} (Linux)
     runs-on: ubuntu-latest
-    fail-fast: false
     strategy:
+      fail-fast: false
       matrix:
         swift-version:
           - '5.5'
