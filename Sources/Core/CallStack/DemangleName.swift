@@ -11,8 +11,7 @@ func _stdlib_demangleImpl(
 ) -> UnsafeMutablePointer<CChar>?
 
 func _stdlib_demangleName(_ mangledName: String) -> String {
-  return mangledName.utf8CString.withUnsafeBufferPointer {
-    mangledNameUTF8CStr in
+  return mangledName.utf8CString.withUnsafeBufferPointer { mangledNameUTF8CStr in
 
     let demangledNamePtr = _stdlib_demangleImpl(
       mangledName: mangledNameUTF8CStr.baseAddress,
@@ -28,18 +27,5 @@ func _stdlib_demangleName(_ mangledName: String) -> String {
       return demangledName
     }
     return mangledName
-  }
-}
-
-extension Collection where Element == CallStack.Symbol {
-  func backtrace() -> [String] {
-    let maxIndexWidth = String(self.count).count
-    let maxImageNameWidth = self.map { $0.imageName.count }.max() ?? 0
-    return self.enumerated().map { i, symbol in
-      let indexPad = String(repeating: " ", count: maxIndexWidth - String(i).count)
-      let imageNamePad = String(repeating: " ", count: maxImageNameWidth - symbol.imageName.count)
-      let demangledName = _stdlib_demangleName(symbol.mangeledName)
-      return "\(i)\(indexPad) \(symbol.imageName)\(imageNamePad) \(demangledName)"
-    }
   }
 }

@@ -75,5 +75,10 @@ private func getEnvironmentValue(key: String) -> String? {
 }
 
 private func getInfoDictionaryValue(key: String) -> String? {
-  Bundle.main.infoDictionary?[key] as? String
+  #if os(Android) || os(OpenBSD) || os(Windows) || os(Linux)
+  return nil
+  #else
+  let bundle = Bundle.allBundles.first(where: { $0.bundlePath.contains(".xctest") }) ?? .main
+  return bundle.infoDictionary?[key] as? String
+  #endif
 }

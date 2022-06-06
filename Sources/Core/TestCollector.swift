@@ -54,14 +54,13 @@ public struct TestCollector {
     let environment = EnvironmentValues()
     let logger = Logger(logLevel: environment.isAnalyticsDebugEnabled ? .debug : .info)
     let collector = TestCollector(environment: environment, logger: logger)
-    logger.waitForLogs(timeout: 1)
+    logger.waitForLogs()
     self.shared = collector
     self.shared?.observer.map(XCTestObservationCenter.shared.addTestObserver)
   }
-  
+
   public private(set) static var shared: TestCollector?
 
   static let name = "test-collector-swift"
   static let version = "0.1.0"
 }
-
