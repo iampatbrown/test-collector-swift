@@ -1,4 +1,4 @@
-name: Example Package Tests
+name: Demo Library Tests
 
 on:
   push
