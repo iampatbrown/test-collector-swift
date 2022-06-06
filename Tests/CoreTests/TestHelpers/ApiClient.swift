@@ -11,9 +11,6 @@ extension ApiClient {
     ApiClient { _ in
       try await Task.sleep(nanoseconds: UInt64(seconds * 1_000_000_000))
       expectation.fulfill()
-      await withUnsafeContinuation { continuation in
-        DispatchQueue.global(qos: .background).async { continuation.resume() }
-      }
       return (Data(), HTTPURLResponse.success())
     }
   }

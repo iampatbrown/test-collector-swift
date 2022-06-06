@@ -13,7 +13,7 @@ final class UploadClientTests: XCTestCase {
     let trace = Trace(id: "id", history: .init(section: "section"))
 
     Task { try await uploadClient.upload(trace: trace) }
-
+    self.sleep(seconds: 0.01)
     uploadClient.waitForUploads()
 
     self.wait(for: [uploadCompleted], timeout: 0.1)
@@ -33,3 +33,4 @@ final class UploadClientTests: XCTestCase {
     self.wait(for: [uploadCompleted], timeout: 1)
   }
 }
+
