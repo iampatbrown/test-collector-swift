@@ -2,6 +2,7 @@ import XCTest
 
 /// An object that captures test data and uploads it in real time.
 class TestObserver: NSObject, XCTestObservation {
+  let callStack: CallStack?
   let logger: Logger?
   let tracer: Tracer
   let uploader: UploadClient?
@@ -21,11 +22,13 @@ class TestObserver: NSObject, XCTestObservation {
   ///   - uploader: The upload client for uploading test results
   ///   - uuid: A closure that returns a unique id to associate with an executed test case.
   init(
+    callStack: CallStack? = .live,
     logger: Logger? = .init(),
     tracer: Tracer = .live(),
     uploader: UploadClient? = nil,
     uuid: @escaping () -> UUID = UUID.init
   ) {
+    self.callStack = callStack
     self.logger = logger
     self.tracer = tracer
     self.uploader = uploader
