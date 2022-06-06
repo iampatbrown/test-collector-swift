@@ -50,11 +50,11 @@ jobs:
       - name: "🛠 Build and Run Tests"
         run: |
           xcrun xcodebuild test \
-            -scheme BuildkiteTestAnalytics \
+            -scheme BuildkiteTestCollector \
             -destination platform="${{ matrix.platform-identifier }}"
       - name: "🛠 Build Release"
         run: |
           xcrun xcodebuild \
-            -scheme BuildkiteTestAnalytics \
+            -scheme BuildkiteTestCollector \
             -configuration Release \
             -destination platform="${{ matrix.platform-identifier }}"
