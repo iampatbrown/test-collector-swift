@@ -2,7 +2,7 @@
 import XCTest
 
 final class FlackyTests: XCTestCase {
-  let allTestsShouldPass = Double.random(in: 0...1) < 4
+  let allTestsShouldPass = Double.random(in: 0...1) < 5
 
   func shouldFail() -> Bool {
     !self.allTestsShouldPass && Bool.random()
