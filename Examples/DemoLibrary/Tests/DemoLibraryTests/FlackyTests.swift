@@ -5,7 +5,7 @@ final class FlackyTests: XCTestCase {
   let allTestsShouldPass = Double.random(in: 0...1) < 5
 
   func shouldFail() -> Bool {
-    self.sleep(seconds: .random(in: 1...3))
+    self.sleep(seconds: .random(in: 1...5))
     return !self.allTestsShouldPass && Bool.random()
   }
 
