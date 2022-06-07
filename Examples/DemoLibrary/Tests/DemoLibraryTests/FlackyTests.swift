@@ -2,11 +2,10 @@
 import XCTest
 
 final class FlackyTests: XCTestCase {
-  let allTestsShouldPass = Double.random(in: 0...1) < 0.9
+  let allTestsShouldPass = Double.random(in: 0...1) < 2
 
   func shouldFail() -> Bool {
-    return true
-//    !self.allTestsShouldPass && Bool.random()
+    !self.allTestsShouldPass && Bool.random()
   }
 
   func testAssertNil() {
@@ -152,10 +151,9 @@ final class FlackyTests: XCTestCase {
       """
     )
   }
-  
+
   func testWillFail10PercentOfTheTime() {
-//    guard !allTestsShouldPass else { return }
-    let shouldFail = true
+    let shouldFail = !self.allTestsShouldPass && Double.random(in: 0...1) < 0.1
     func foo() { bar() }
     func bar() { baz() }
     func baz() { if shouldFail { unhappyPath() } }
