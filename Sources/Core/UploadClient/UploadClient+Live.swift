@@ -25,8 +25,9 @@ extension UploadClient {
         logger?.debug("uploading \(testData)")
 
         do {
-          _ = try await api.data(for: .upload(testData), as: UploadResponse.self)
+          _ = try await api.data(for: .upload(testData))
         } catch {
+          print(error)
           logger?.error(error.localizedDescription)
           throw error
         }
