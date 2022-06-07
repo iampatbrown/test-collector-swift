@@ -151,6 +151,15 @@ final class FlackyTests: XCTestCase {
       """
     )
   }
+  
+  func testWillFail10PercentOfTheTime() {
+    let shouldFail = Double.random(in: 0...1) < 0.1
+    func foo() { bar() }
+    func bar() { baz() }
+    func baz() { if shouldFail { unhappyPath() } }
+    func unhappyPath() { XCTFail("Unhappy path taken") }
+    foo()
+  }
 }
 
 struct User: Equatable, Identifiable { var id: Int, name: String }
