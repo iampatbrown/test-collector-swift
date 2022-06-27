@@ -43,7 +43,7 @@ extension EnvironmentValues {
   var analyticsSha: String? { self.string(for: "BUILDKITE_ANALYTICS_SHA") }
   var analyticsNumber: String? { self.string(for: "BUILDKITE_ANALYTICS_NUMBER") }
   var analyticsJobId: String? { self.string(for: "BUILDKITE_ANALYTICS_JOB_ID") }
-  var analyticsMessage: String? { self.string(for: "BUILDKITE_ANANLYTICS_MESSAGE") }
+  var analyticsMessage: String? { self.string(for: "BUILDKITE_ANALYTICS_MESSAGE") }
 
   var buildkiteBuildId: String? { self.string(for: "BUILDKITE_BUILD_ID") }
   var buildkiteBuildUrl: String? { self.string(for: "BUILDKITE_BUILD_URL") }
@@ -75,5 +75,6 @@ private func getEnvironmentValue(key: String) -> String? {
 }
 
 private func getInfoDictionaryValue(key: String) -> String? {
-  Bundle.main.infoDictionary?[key] as? String
+  let bundle = Bundle.allBundles.first(where: { $0.bundlePath.hasSuffix(".xctest") }) ?? .main
+  return bundle.infoDictionary?[key] as? String
 }

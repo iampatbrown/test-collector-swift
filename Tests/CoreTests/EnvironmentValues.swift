@@ -16,4 +16,9 @@ final class EnvironmentValuesTests: XCTestCase {
     XCTAssertEqual(environment.string(for: "TWO"), "ENVIRONMENT")
     XCTAssertEqual(environment.string(for: "THREE"), "INFO PLIST")
   }
+
+  func testInfoPlist() {
+    let environment = EnvironmentValues()
+    XCTAssertEqual(environment.string(for: "CFBundleName"), "CoreTests")
+  }
 }
