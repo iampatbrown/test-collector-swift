@@ -1,10 +1,3 @@
-//
-//  BuildkiteRunEnvironmentTests.swift
-//  BuildkiteRunEnvironmentTests
-//
-//  Created by Pat Brown on 28/6/2022.
-//
-
 @testable import Core
 import XCTest
 
@@ -22,7 +15,7 @@ class BuildkiteRunEnvironmentTests: XCTestCase {
   }
 
   func testInfoPlist() {
-    let runEnvironment = EnvironmentValues().runEnvironment()
+    let runEnvironment = EnvironmentValues(getFromEnvironment: { _ in nil }).runEnvironment()
     XCTAssertEqual(runEnvironment.ci, "buildkite")
     XCTAssertEqual(runEnvironment.key, "buildId")
     XCTAssertEqual(runEnvironment.url, "buildURL")
