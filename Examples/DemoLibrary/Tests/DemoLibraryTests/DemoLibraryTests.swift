@@ -14,7 +14,7 @@ final class DemoLibraryTests: XCTestCase {
     return suite
   }
 
-  func testExample() async await {
-//    try await Task.sleep(nanoseconds: 1_000_000)
+  func testExample() async throws {
+    XCTAssertEqual(DemoLibrary().text, "Hello, World!")
   }
 }
