@@ -84,6 +84,11 @@
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
+            key = "BUILDKITE_ANALYTICS_DEBUG_ENABLED"
+            value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
             key = "GITHUB_ACTION"
             value = "$(GITHUB_ACTION)"
             isEnabled = "YES">
