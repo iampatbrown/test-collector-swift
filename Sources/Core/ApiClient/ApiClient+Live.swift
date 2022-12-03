@@ -10,7 +10,7 @@ extension ApiClient {
     baseUrl: URL = URL(string: "https://analytics-api.buildkite.com/v1/")!,
     encoder: JSONEncoder = .init(),
     decoder: JSONDecoder = .init(),
-    session: ApiSession = .urlSession(URLSession(configuration: .default))
+    session: ApiSession = .urlSession(.shared)
   ) -> ApiClient {
     func makeRequest(from route: ApiRoute) throws -> URLRequest {
       var request = URLRequest(url: baseUrl)
