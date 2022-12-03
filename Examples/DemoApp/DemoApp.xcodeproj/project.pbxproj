@@ -15,13 +15,6 @@
 		23E58927293AD29600FA0782 /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E58926293AD29600FA0782 /* DemoAppUITests.swift */; };
 		23E58937293AE37A00FA0782 /* BuildkiteTestCollector in Frameworks */ = {isa = PBXBuildFile; productRef = 23E58936293AE37A00FA0782 /* BuildkiteTestCollector */; };
 		23E58939293AE37E00FA0782 /* BuildkiteTestCollector in Frameworks */ = {isa = PBXBuildFile; productRef = 23E58938293AE37E00FA0782 /* BuildkiteTestCollector */; };
-		23E58943293B03EE00FA0782 /* DemoAppMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E58942293B03EE00FA0782 /* DemoAppMacApp.swift */; };
-		23E58945293B03EE00FA0782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E58944293B03EE00FA0782 /* ContentView.swift */; };
-		23E58947293B03EF00FA0782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E58946293B03EF00FA0782 /* Assets.xcassets */; };
-		23E5894A293B03EF00FA0782 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E58949293B03EF00FA0782 /* Preview Assets.xcassets */; };
-		23E58955293B03F000FA0782 /* DemoAppMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E58954293B03F000FA0782 /* DemoAppMacTests.swift */; };
-		23E58970293B060B00FA0782 /* BuildkiteTestCollector in Frameworks */ = {isa = PBXBuildFile; productRef = 23E5896F293B060B00FA0782 /* BuildkiteTestCollector */; };
-		23E58974293B129B00FA0782 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E58973293B129B00FA0782 /* Info.plist */; };
 		23E58978293B12C100FA0782 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E58977293B12C100FA0782 /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -40,13 +33,6 @@
 			remoteGlobalIDString = 23E58907293AD29500FA0782;
 			remoteInfo = DemoApp;
 		};
-		23E58951293B03F000FA0782 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 23E58900293AD29500FA0782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 23E5893F293B03EE00FA0782;
-			remoteInfo = DemoAppMac;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -60,15 +46,6 @@
 		23E58922293AD29600FA0782 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E58926293AD29600FA0782 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
 		23E5893B293AFAD000FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		23E58940293B03EE00FA0782 /* DemoAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		23E58942293B03EE00FA0782 /* DemoAppMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppMacApp.swift; sourceTree = "<group>"; };
-		23E58944293B03EE00FA0782 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		23E58946293B03EF00FA0782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		23E58949293B03EF00FA0782 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		23E5894B293B03EF00FA0782 /* DemoAppMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoAppMac.entitlements; sourceTree = "<group>"; };
-		23E58950293B03F000FA0782 /* DemoAppMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23E58954293B03F000FA0782 /* DemoAppMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppMacTests.swift; sourceTree = "<group>"; };
-		23E58973293B129B00FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23E58977293B12C100FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,21 +73,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23E5893D293B03EE00FA0782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23E5894D293B03F000FA0782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23E58970293B060B00FA0782 /* BuildkiteTestCollector in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -120,8 +82,6 @@
 				23E5890A293AD29500FA0782 /* DemoApp */,
 				23E5891B293AD29600FA0782 /* DemoAppTests */,
 				23E58925293AD29600FA0782 /* DemoAppUITests */,
-				23E58941293B03EE00FA0782 /* DemoAppMac */,
-				23E58953293B03F000FA0782 /* DemoAppMacTests */,
 				23E58909293AD29500FA0782 /* Products */,
 				23E58935293AE37A00FA0782 /* Frameworks */,
 			);
@@ -133,8 +93,6 @@
 				23E58908293AD29500FA0782 /* DemoApp.app */,
 				23E58918293AD29600FA0782 /* DemoAppTests.xctest */,
 				23E58922293AD29600FA0782 /* DemoAppUITests.xctest */,
-				23E58940293B03EE00FA0782 /* DemoAppMac.app */,
-				23E58950293B03F000FA0782 /* DemoAppMacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,8 +119,8 @@
 		23E5891B293AD29600FA0782 /* DemoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				23E5893B293AFAD000FA0782 /* Info.plist */,
 				23E5891C293AD29600FA0782 /* DemoAppTests.swift */,
+				23E5893B293AFAD000FA0782 /* Info.plist */,
 			);
 			path = DemoAppTests;
 			sourceTree = "<group>";
@@ -181,35 +139,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		23E58941293B03EE00FA0782 /* DemoAppMac */ = {
-			isa = PBXGroup;
-			children = (
-				23E58942293B03EE00FA0782 /* DemoAppMacApp.swift */,
-				23E58944293B03EE00FA0782 /* ContentView.swift */,
-				23E58946293B03EF00FA0782 /* Assets.xcassets */,
-				23E5894B293B03EF00FA0782 /* DemoAppMac.entitlements */,
-				23E58948293B03EF00FA0782 /* Preview Content */,
-			);
-			path = DemoAppMac;
-			sourceTree = "<group>";
-		};
-		23E58948293B03EF00FA0782 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				23E58949293B03EF00FA0782 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		23E58953293B03F000FA0782 /* DemoAppMacTests */ = {
-			isa = PBXGroup;
-			children = (
-				23E58954293B03F000FA0782 /* DemoAppMacTests.swift */,
-				23E58973293B129B00FA0782 /* Info.plist */,
-			);
-			path = DemoAppMacTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,44 +203,6 @@
 			productReference = 23E58922293AD29600FA0782 /* DemoAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		23E5893F293B03EE00FA0782 /* DemoAppMac */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 23E58962293B03F000FA0782 /* Build configuration list for PBXNativeTarget "DemoAppMac" */;
-			buildPhases = (
-				23E5893C293B03EE00FA0782 /* Sources */,
-				23E5893D293B03EE00FA0782 /* Frameworks */,
-				23E5893E293B03EE00FA0782 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DemoAppMac;
-			productName = DemoAppMac;
-			productReference = 23E58940293B03EE00FA0782 /* DemoAppMac.app */;
-			productType = "com.apple.product-type.application";
-		};
-		23E5894F293B03F000FA0782 /* DemoAppMacTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 23E58965293B03F000FA0782 /* Build configuration list for PBXNativeTarget "DemoAppMacTests" */;
-			buildPhases = (
-				23E5894C293B03F000FA0782 /* Sources */,
-				23E5894D293B03F000FA0782 /* Frameworks */,
-				23E5894E293B03F000FA0782 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				23E58952293B03F000FA0782 /* PBXTargetDependency */,
-			);
-			name = DemoAppMacTests;
-			packageProductDependencies = (
-				23E5896F293B060B00FA0782 /* BuildkiteTestCollector */,
-			);
-			productName = DemoAppMacTests;
-			productReference = 23E58950293B03F000FA0782 /* DemoAppMacTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -333,13 +224,6 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 23E58907293AD29500FA0782;
 					};
-					23E5893F293B03EE00FA0782 = {
-						CreatedOnToolsVersion = 14.1;
-					};
-					23E5894F293B03F000FA0782 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 23E5893F293B03EE00FA0782;
-					};
 				};
 			};
 			buildConfigurationList = 23E58903293AD29500FA0782 /* Build configuration list for PBXProject "DemoApp" */;
@@ -358,8 +242,6 @@
 				23E58907293AD29500FA0782 /* DemoApp */,
 				23E58917293AD29600FA0782 /* DemoAppTests */,
 				23E58921293AD29600FA0782 /* DemoAppUITests */,
-				23E5893F293B03EE00FA0782 /* DemoAppMac */,
-				23E5894F293B03F000FA0782 /* DemoAppMacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -386,23 +268,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E58978293B12C100FA0782 /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23E5893E293B03EE00FA0782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23E5894A293B03EF00FA0782 /* Preview Assets.xcassets in Resources */,
-				23E58947293B03EF00FA0782 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23E5894E293B03F000FA0782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23E58974293B129B00FA0782 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,23 +299,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23E5893C293B03EE00FA0782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23E58945293B03EE00FA0782 /* ContentView.swift in Sources */,
-				23E58943293B03EE00FA0782 /* DemoAppMacApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		23E5894C293B03F000FA0782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				23E58955293B03F000FA0782 /* DemoAppMacTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -463,11 +311,6 @@
 			isa = PBXTargetDependency;
 			target = 23E58907293AD29500FA0782 /* DemoApp */;
 			targetProxy = 23E58923293AD29600FA0782 /* PBXContainerItemProxy */;
-		};
-		23E58952293B03F000FA0782 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 23E5893F293B03EE00FA0782 /* DemoAppMac */;
-			targetProxy = 23E58951293B03F000FA0782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -728,110 +571,6 @@
 			};
 			name = Release;
 		};
-		23E58963293B03F000FA0782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DemoAppMac/DemoAppMac.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DemoAppMac/Preview Content\"";
-				DEVELOPMENT_TEAM = G7SC3UG6VB;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.buildkite.DemoAppMac;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		23E58964293B03F000FA0782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DemoAppMac/DemoAppMac.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DemoAppMac/Preview Content\"";
-				DEVELOPMENT_TEAM = G7SC3UG6VB;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.buildkite.DemoAppMac;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		23E58966293B03F000FA0782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G7SC3UG6VB;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DemoAppMacTests/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.buildkite.DemoAppMacTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoAppMac.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DemoAppMac";
-			};
-			name = Debug;
-		};
-		23E58967293B03F000FA0782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G7SC3UG6VB;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DemoAppMacTests/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.buildkite.DemoAppMacTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoAppMac.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DemoAppMac";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -871,24 +610,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23E58962293B03F000FA0782 /* Build configuration list for PBXNativeTarget "DemoAppMac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				23E58963293B03F000FA0782 /* Debug */,
-				23E58964293B03F000FA0782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		23E58965293B03F000FA0782 /* Build configuration list for PBXNativeTarget "DemoAppMacTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				23E58966293B03F000FA0782 /* Debug */,
-				23E58967293B03F000FA0782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -897,10 +618,6 @@
 			productName = BuildkiteTestCollector;
 		};
 		23E58938293AE37E00FA0782 /* BuildkiteTestCollector */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BuildkiteTestCollector;
-		};
-		23E5896F293B060B00FA0782 /* BuildkiteTestCollector */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BuildkiteTestCollector;
 		};
