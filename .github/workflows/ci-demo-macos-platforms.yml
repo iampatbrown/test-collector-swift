@@ -47,7 +47,7 @@ jobs:
       BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN_DEMO }}
     steps:
     - name: "⬇️ Checkout"
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: "🛠 Build and Run Tests"
       run: |
         xcrun xcodebuild test \
