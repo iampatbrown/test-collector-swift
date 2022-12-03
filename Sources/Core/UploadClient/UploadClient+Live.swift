@@ -25,7 +25,7 @@ extension UploadClient {
         logger?.debug("uploading \(testData)")
 
         do {
-          let data = try await api.data(for: .upload(testData)).0
+          let (data, _) = try await api.data(for: .upload(testData))
           guard let result = try? api.decode(data, as: UploadResponse.self) else {
             if let errorMessage = try? api.decode(data, as: UploadFailureResponse.self) {
               throw UploadError.error(message: errorMessage.message)

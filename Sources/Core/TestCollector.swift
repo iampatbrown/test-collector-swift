@@ -56,7 +56,7 @@ public struct TestCollector {
     let logger = Logger(logLevel: environment.isAnalyticsDebugEnabled ? .debug : .info)
     environment.logger = logger
     let collector = TestCollector(environment: environment, logger: logger)
-    // logger.waitForLogs() // Ensures logging is complete to avoid printing to stdout
+    logger.waitForLogs() // Ensures logging is complete to avoid printing to stdout
     self.shared = collector
     self.shared?.observer.map(XCTestObservationCenter.shared.addTestObserver)
   }
