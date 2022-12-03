@@ -30,18 +30,27 @@ struct EnvironmentValues {
     if let value = customDictionaryValue {
       return value.trimmingCharacters(in: .whitespacesAndNewlines)
     }
+//    if let value = customDictionaryValue?.trimmingCharacters(in: .whitespacesAndNewlines), !value.isEmpty  {
+//      return value
+//    }
 
     let environmentValue = self.getFromEnvironment(key)
     logger?.debug(debugMessage(key: key, value: environmentValue, location: "environment", redactValue: redactInLogs))
     if let value = environmentValue {
       return value.trimmingCharacters(in: .whitespacesAndNewlines)
     }
+//    if let value = environmentValue?.trimmingCharacters(in: .whitespacesAndNewlines), !value.isEmpty {
+//      return value
+//    }
 
     let infoDictionaryValue = self.getFromInfoDictionary(key)
     logger?.debug(debugMessage(key: key, value: infoDictionaryValue, location: "info dictionary", redactValue: redactInLogs))
     if let value = infoDictionaryValue {
       return value.trimmingCharacters(in: .whitespacesAndNewlines)
     }
+//    if let value = infoDictionaryValue?.trimmingCharacters(in: .whitespacesAndNewlines), !value.isEmpty {
+//      return value
+//    }
 
     return nil
   }
