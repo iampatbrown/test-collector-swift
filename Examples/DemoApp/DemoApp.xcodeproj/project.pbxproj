@@ -44,8 +44,7 @@
 		23E5891C293AD29600FA0782 /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
 		23E58922293AD29600FA0782 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E58926293AD29600FA0782 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
-		23E5893B293AFAD000FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		23E58977293B12C100FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23E5897A293B1DBB00FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +98,7 @@
 		23E5890A293AD29500FA0782 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				23E5897A293B1DBB00FA0782 /* Info.plist */,
 				23E5890B293AD29500FA0782 /* DemoAppApp.swift */,
 				23E5890D293AD29500FA0782 /* ContentView.swift */,
 				23E5890F293AD29600FA0782 /* Assets.xcassets */,
@@ -119,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				23E5891C293AD29600FA0782 /* DemoAppTests.swift */,
-				23E5893B293AFAD000FA0782 /* Info.plist */,
 			);
 			path = DemoAppTests;
 			sourceTree = "<group>";
@@ -128,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				23E58926293AD29600FA0782 /* DemoAppUITests.swift */,
-				23E58977293B12C100FA0782 /* Info.plist */,
 			);
 			path = DemoAppUITests;
 			sourceTree = "<group>";
@@ -438,6 +436,8 @@
 				DEVELOPMENT_TEAM = G7SC3UG6VB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -467,6 +467,8 @@
 				DEVELOPMENT_TEAM = G7SC3UG6VB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -494,7 +496,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G7SC3UG6VB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DemoAppTests/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
@@ -516,7 +518,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G7SC3UG6VB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DemoAppTests/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
@@ -537,7 +539,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G7SC3UG6VB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DemoAppUITests/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "BUILDKITE_ANALYTICS_TOKEN=$(BUILDKITE_ANALYTICS_TOKEN)\nGITHUB_ACTION=$(GITHUB_ACTION)\nGITHUB_REF=$(GITHUB_REF)\nGITHUB_RUN_NUMBER=$(GITHUB_RUN_NUMBER)\nGITHUB_RUN_ATTEMPT=$(GITHUB_RUN_ATTEMPT)\nGITHUB_REPOSITORY=$(GITHUB_REPOSITORY)\nGITHUB_RUN_ID=$(GITHUB_RUN_ID)\nGITHUB_SHA=$(GITHUB_SHA)\nGITHUB_WORKFLOW=$(GITHUB_WORKFLOW)\nGITHUB_ACTOR=$(GITHUB_ACTOR)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.buildkite.DemoAppUITests;
@@ -557,7 +559,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G7SC3UG6VB;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DemoAppUITests/Info.plist;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "BUILDKITE_ANALYTICS_TOKEN=$(BUILDKITE_ANALYTICS_TOKEN)\nGITHUB_ACTION=$(GITHUB_ACTION)\nGITHUB_REF=$(GITHUB_REF)\nGITHUB_RUN_NUMBER=$(GITHUB_RUN_NUMBER)\nGITHUB_RUN_ATTEMPT=$(GITHUB_RUN_ATTEMPT)\nGITHUB_REPOSITORY=$(GITHUB_REPOSITORY)\nGITHUB_RUN_ID=$(GITHUB_RUN_ID)\nGITHUB_SHA=$(GITHUB_SHA)\nGITHUB_WORKFLOW=$(GITHUB_WORKFLOW)\nGITHUB_ACTOR=$(GITHUB_ACTOR)";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.buildkite.DemoAppUITests;
