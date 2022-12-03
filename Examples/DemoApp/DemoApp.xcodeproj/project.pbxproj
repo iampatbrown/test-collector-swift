@@ -15,7 +15,6 @@
 		23E58927293AD29600FA0782 /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E58926293AD29600FA0782 /* DemoAppUITests.swift */; };
 		23E58937293AE37A00FA0782 /* BuildkiteTestCollector in Frameworks */ = {isa = PBXBuildFile; productRef = 23E58936293AE37A00FA0782 /* BuildkiteTestCollector */; };
 		23E58939293AE37E00FA0782 /* BuildkiteTestCollector in Frameworks */ = {isa = PBXBuildFile; productRef = 23E58938293AE37E00FA0782 /* BuildkiteTestCollector */; };
-		23E58978293B12C100FA0782 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E58977293B12C100FA0782 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,7 +266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E58978293B12C100FA0782 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
