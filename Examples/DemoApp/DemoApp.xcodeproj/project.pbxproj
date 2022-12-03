@@ -13,7 +13,8 @@
 		23E58913293AD29600FA0782 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E58912293AD29600FA0782 /* Preview Assets.xcassets */; };
 		23E5891D293AD29600FA0782 /* DemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E5891C293AD29600FA0782 /* DemoAppTests.swift */; };
 		23E58927293AD29600FA0782 /* DemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E58926293AD29600FA0782 /* DemoAppUITests.swift */; };
-		23E58929293AD29600FA0782 /* DemoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E58928293AD29600FA0782 /* DemoAppUITestsLaunchTests.swift */; };
+		23E58937293AE37A00FA0782 /* BuildkiteTestCollector in Frameworks */ = {isa = PBXBuildFile; productRef = 23E58936293AE37A00FA0782 /* BuildkiteTestCollector */; };
+		23E58939293AE37E00FA0782 /* BuildkiteTestCollector in Frameworks */ = {isa = PBXBuildFile; productRef = 23E58938293AE37E00FA0782 /* BuildkiteTestCollector */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,6 @@
 		23E5891C293AD29600FA0782 /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
 		23E58922293AD29600FA0782 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E58926293AD29600FA0782 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
-		23E58928293AD29600FA0782 /* DemoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E58937293AE37A00FA0782 /* BuildkiteTestCollector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E58939293AE37E00FA0782 /* BuildkiteTestCollector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +80,7 @@
 				23E5891B293AD29600FA0782 /* DemoAppTests */,
 				23E58925293AD29600FA0782 /* DemoAppUITests */,
 				23E58909293AD29500FA0782 /* Products */,
+				23E58935293AE37A00FA0782 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +125,15 @@
 			isa = PBXGroup;
 			children = (
 				23E58926293AD29600FA0782 /* DemoAppUITests.swift */,
-				23E58928293AD29600FA0782 /* DemoAppUITestsLaunchTests.swift */,
 			);
 			path = DemoAppUITests;
+			sourceTree = "<group>";
+		};
+		23E58935293AE37A00FA0782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +170,9 @@
 				23E5891A293AD29600FA0782 /* PBXTargetDependency */,
 			);
 			name = DemoAppTests;
+			packageProductDependencies = (
+				23E58936293AE37A00FA0782 /* BuildkiteTestCollector */,
+			);
 			productName = DemoAppTests;
 			productReference = 23E58918293AD29600FA0782 /* DemoAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -179,6 +191,9 @@
 				23E58924293AD29600FA0782 /* PBXTargetDependency */,
 			);
 			name = DemoAppUITests;
+			packageProductDependencies = (
+				23E58938293AE37E00FA0782 /* BuildkiteTestCollector */,
+			);
 			productName = DemoAppUITests;
 			productReference = 23E58922293AD29600FA0782 /* DemoAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -275,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E58927293AD29600FA0782 /* DemoAppUITests.swift in Sources */,
-				23E58929293AD29600FA0782 /* DemoAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +597,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		23E58936293AE37A00FA0782 /* BuildkiteTestCollector */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BuildkiteTestCollector;
+		};
+		23E58938293AE37E00FA0782 /* BuildkiteTestCollector */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BuildkiteTestCollector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 23E58900293AD29500FA0782 /* Project object */;
 }
