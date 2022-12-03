@@ -5,57 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  # demo-library-tests:
-  #   name: Demo Library Swift ${{ matrix.swift-version }} (macOS)
-  #   runs-on: macos-12
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       xcode-version:
-  #         - '14.0.1'
-  #       include:
-  #         - swift-version: '5.6'
-  #           xcode-version: '14.0.1'
-  #   env:
-  #     DEVELOPER_DIR: "/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer"
-  #     BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN_DEMO }}
-  #   steps:
-  #   - name: "⬇️ Checkout"
-  #     uses: actions/checkout@v2
-  #   - name: "🛠 Build and Run Tests"
-  #     run: cd Examples/DemoLibrary && swift test
-  # demo-app-tests:
-  #   name: Demo App ${{ matrix.config }} Swift ${{ matrix.swift-version }} (${{ matrix.platform }})
-  #   runs-on: macos-12
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       config:
-  #         - Debug
-  #         # - Release
-  #       xcode-version:
-  #         - '14.0.1'
-  #       platform:
-  #         - iOS
-  #       include:
-  #         - swift-version: '5.6'
-  #           xcode-version: '14.0.1'
-  #         - platform-identifier: 'iOS Simulator,name=iPhone 11 Pro Max'
-  #           platform: iOS
-  #   env:
-  #     BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN_DEMO_APP }}
-  #   steps:
-  #   - name: "⬇️ Checkout"
-  #     uses: actions/checkout@v3
-  #   - name: Select Xcode ${{ matrix.xcode-version }}
-  #     run: sudo xcode-select -s /Applications/Xcode_${{ matrix.xcode-version }}.app
-  #   - name: "🛠 Build and Run Tests"
-  #     run: |
-  #       xcodebuild test \
-  #         -scheme DemoApp \
-  #         -configuration ${{ matrix.config }} \
-  #         -destination platform="${{ matrix.platform-identifier }}"
-demo-app-mac-tests:
+  demo-app-mac-tests:
     name: Demo App Mac ${{ matrix.config }} Swift ${{ matrix.swift-version }} (${{ matrix.platform }})
     runs-on: macos-12
     strategy:
@@ -63,7 +13,6 @@ demo-app-mac-tests:
       matrix:
         config:
           - Debug
-          # - Release
         xcode-version:
           - '14.0.1'
         platform:
@@ -71,8 +20,6 @@ demo-app-mac-tests:
         include:
           - swift-version: '5.6'
             xcode-version: '14.0.1'
-          # - platform-identifier: 'iOS Simulator,name=iPhone 11 Pro Max'
-          #   platform: iOS
     env:
       BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN_DEMO_APP }}
     steps:
@@ -84,5 +31,3 @@ demo-app-mac-tests:
       run: |
         xcodebuild test \
           -scheme DemoAppMac 
-#          -configuration ${{ matrix.config }} 
-#          -destination platform="${{ matrix.platform-identifier }}"
