@@ -12,13 +12,10 @@ jobs:
       fail-fast: false
       matrix:
         xcode-version:
-          # - '13.2.1'
-          - '13.3.1'
+          - '14.0.1'
         include:
-          # - swift-version: '5.5'
-          #   xcode-version: '13.2.1'
           - swift-version: '5.6'
-            xcode-version: '13.3.1'
+            xcode-version: '14.0.1'
     env:
       DEVELOPER_DIR: "/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer"
       BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN_DEMO }}
@@ -27,3 +24,35 @@ jobs:
       uses: actions/checkout@v2
     - name: "🛠 Build and Run Tests"
       run: cd Examples/DemoLibrary && swift test
+  demo-app-tests:
+    name: Demo App Swift ${{ matrix.swift-version }} (${{ matrix.platform }})
+    runs-on: macos-12
+    strategy:
+      fail-fast: false
+      matrix:
+        xcode-version:
+          - '14.0.1'
+        platform:
+          - iOS
+        include:
+          - swift-version: '5.6'
+            xcode-version: '14.0.1'
+          - platform-identifier: 'iOS Simulator,name=iPhone 11 Pro Max'
+            platform: iOS
+    env:
+      DEVELOPER_DIR: "/Applications/Xcode_${{ matrix.xcode-version }}.app/Contents/Developer"
+      BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN_DEMO }}
+    steps:
+    - name: "⬇️ Checkout"
+      uses: actions/checkout@v2
+    - name: "🛠 Build and Run Tests"
+      run: |
+        xcrun xcodebuild test \
+          -scheme DemoApp \
+          -destination platform="${{ matrix.platform-identifier }}"
+    - name: "🛠 Build Release"
+      run: |
+        xcrun xcodebuild \
+          -scheme DemoApp \
+          -configuration Release \
+          -destination platform="${{ matrix.platform-identifier }}"
