@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>BUILDKITE_ANALYTICS_TOKEN</key>
-  <string>$(BUILDKITE_ANALYTICS_TOKEN)</string>
+  <string>P4GyvNcpnMZ3xXysumF3AMcq</string>
   <key>GITHUB_ACTION</key>
   <string>$(GITHUB_ACTION)</string>
   <key>GITHUB_REF</key>
