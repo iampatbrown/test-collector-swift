@@ -117,9 +117,9 @@ private let loggerQueue = DispatchQueue(
 // Default printer used by Logger
 private func loggerPrint(_ message: String) {
   // While loading, print to stderr to avoid conflicting with `swift test --list-tests`
-  if TestCollector.shared == nil {
-    fputs("\(message)\n", stderr)
-  } else {
+  if TestCollector.shared?.observer?.bundleDidStart == true {
     print(message)
+  } else {
+    fputs("\(message)\n", stderr)
   }
 }
