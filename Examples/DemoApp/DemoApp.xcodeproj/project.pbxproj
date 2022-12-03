@@ -20,8 +20,9 @@
 		23E58947293B03EF00FA0782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E58946293B03EF00FA0782 /* Assets.xcassets */; };
 		23E5894A293B03EF00FA0782 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E58949293B03EF00FA0782 /* Preview Assets.xcassets */; };
 		23E58955293B03F000FA0782 /* DemoAppMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E58954293B03F000FA0782 /* DemoAppMacTests.swift */; };
-		23E5896C293B043C00FA0782 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E5896B293B043C00FA0782 /* Info.plist */; };
 		23E58970293B060B00FA0782 /* BuildkiteTestCollector in Frameworks */ = {isa = PBXBuildFile; productRef = 23E5896F293B060B00FA0782 /* BuildkiteTestCollector */; };
+		23E58974293B129B00FA0782 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E58973293B129B00FA0782 /* Info.plist */; };
+		23E58978293B12C100FA0782 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E58977293B12C100FA0782 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,6 @@
 		23E5891C293AD29600FA0782 /* DemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppTests.swift; sourceTree = "<group>"; };
 		23E58922293AD29600FA0782 /* DemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E58926293AD29600FA0782 /* DemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppUITests.swift; sourceTree = "<group>"; };
-		23E5893A293AF96100FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		23E5893B293AFAD000FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		23E58940293B03EE00FA0782 /* DemoAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E58942293B03EE00FA0782 /* DemoAppMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppMacApp.swift; sourceTree = "<group>"; };
@@ -68,7 +68,8 @@
 		23E5894B293B03EF00FA0782 /* DemoAppMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoAppMac.entitlements; sourceTree = "<group>"; };
 		23E58950293B03F000FA0782 /* DemoAppMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoAppMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E58954293B03F000FA0782 /* DemoAppMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppMacTests.swift; sourceTree = "<group>"; };
-		23E5896B293B043C00FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = DemoAppUITests/Info.plist; sourceTree = SOURCE_ROOT; };
+		23E58973293B129B00FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23E58977293B12C100FA0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +170,8 @@
 		23E58925293AD29600FA0782 /* DemoAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				23E5893A293AF96100FA0782 /* Info.plist */,
 				23E58926293AD29600FA0782 /* DemoAppUITests.swift */,
+				23E58977293B12C100FA0782 /* Info.plist */,
 			);
 			path = DemoAppUITests;
 			sourceTree = "<group>";
@@ -205,8 +206,8 @@
 		23E58953293B03F000FA0782 /* DemoAppMacTests */ = {
 			isa = PBXGroup;
 			children = (
-				23E5896B293B043C00FA0782 /* Info.plist */,
 				23E58954293B03F000FA0782 /* DemoAppMacTests.swift */,
+				23E58973293B129B00FA0782 /* Info.plist */,
 			);
 			path = DemoAppMacTests;
 			sourceTree = "<group>";
@@ -384,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E58978293B12C100FA0782 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +402,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E5896C293B043C00FA0782 /* Info.plist in Resources */,
+				23E58974293B129B00FA0782 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,6 +798,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G7SC3UG6VB;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoAppTestsMac/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.buildkite.DemoAppMacTests;
@@ -817,6 +820,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G7SC3UG6VB;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoAppTestsMac/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.buildkite.DemoAppMacTests;
