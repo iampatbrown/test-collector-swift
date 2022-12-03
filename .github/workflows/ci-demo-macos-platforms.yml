@@ -25,11 +25,14 @@ jobs:
   #   - name: "🛠 Build and Run Tests"
   #     run: cd Examples/DemoLibrary && swift test
   demo-app-tests:
-    name: Demo App Swift ${{ matrix.swift-version }} (${{ matrix.platform }})
+    name: Demo App ${{ matrix.config }} Swift ${{ matrix.swift-version }} (${{ matrix.platform }})
     runs-on: macos-12
     strategy:
       fail-fast: false
       matrix:
+        config:
+          - Debug
+          - Release
         xcode-version:
           - '14.0.1'
         platform:
@@ -49,10 +52,5 @@ jobs:
       run: |
         xcrun xcodebuild test \
           -scheme DemoApp \
-          -destination platform="${{ matrix.platform-identifier }}"
-    - name: "🛠 Build Release"
-      run: |
-        xcrun xcodebuild \
-          -scheme DemoApp \
-          -configuration Release \
+          -configuration ${{ matrix.config }} \
           -destination platform="${{ matrix.platform-identifier }}"
