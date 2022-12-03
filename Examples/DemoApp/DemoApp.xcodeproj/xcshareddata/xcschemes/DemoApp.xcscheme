@@ -77,58 +77,6 @@
             ReferencedContainer = "container:DemoApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "BUILDKITE_ANALYTICS_TOKEN"
-            value = "$(BUILDKITE_ANALYTICS_TOKEN)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_ACTION"
-            value = "$(GITHUB_ACTION)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_REF"
-            value = "$(GITHUB_REF)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_RUN_NUMBER"
-            value = "$(GITHUB_RUN_NUMBER)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_RUN_ATTEMPT"
-            value = "$(GITHUB_RUN_ATTEMPT)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_REPOSITORY"
-            value = "$(GITHUB_REPOSITORY)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_RUN_ID"
-            value = "$(GITHUB_RUN_ID)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_SHA"
-            value = "$(GITHUB_SHA)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_WORKFLOW"
-            value = "$(GITHUB_WORKFLOW)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_ACTOR"
-            value = "$(GITHUB_ACTOR)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
