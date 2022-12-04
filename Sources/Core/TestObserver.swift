@@ -2,7 +2,6 @@ import XCTest
 
 /// An object that captures test data and uploads it in real time.
 class TestObserver: NSObject, XCTestObservation {
-  var bundleDidStart = false
   let logger: Logger?
   let tracer: Tracer
   let uploader: UploadClient?
@@ -31,11 +30,6 @@ class TestObserver: NSObject, XCTestObservation {
     self.tracer = tracer
     self.uploader = uploader
     self.uuid = uuid
-  }
-
-  func testBundleWillStart(_ testBundle: Bundle) {
-    self.logger?.waitForLogs()
-    self.bundleDidStart = true
   }
   
   /// Notifies the observer immediately before a test case begins executing.
