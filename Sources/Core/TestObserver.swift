@@ -92,7 +92,7 @@ class TestObserver: NSObject, XCTestObservation {
 
     let trace = Trace(test: test, span: span)
 
-    Task { try await self.uploader?.upload(trace: trace) }
+    Task.detached { try await self.uploader?.upload(trace: trace) }
   }
 
   /// Notifies the observer immediately after all tests in a test bundle finish executing.
