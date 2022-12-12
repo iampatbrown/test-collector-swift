@@ -8,7 +8,7 @@ extension DispatchGroup {
   func yieldAndWait(timeout: TimeInterval) -> DispatchTimeoutResult {
     self.enter()
     Task(priority: .background) {
-      await Task.yield()
+      await Task.detached(priority: .background) { await Task.yield() }.value
       self.leave()
     }
     return self.wait(timeout: .now() + .milliseconds(Int(timeout * 1000)))
