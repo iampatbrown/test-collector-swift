@@ -38,8 +38,10 @@ struct Logger {
   func log(level: Level, _ message: @autoclosure () -> String) {
     guard level >= self.logLevel else { return }
     let message = "[BuildkiteTestCollector] \(level): \(message())"
-    self.queue.async(group: self.loggerTasks) {
+    self.loggerTasks.enter()
+    self.queue.async {
       self.printer(message)
+      self.loggerTasks.leave()
     }
   }
 
@@ -74,7 +76,7 @@ struct Logger {
   ///
   /// - Parameter timeout: The maximum duration in seconds to wait for logs to complete.
   func waitForLogs(timeout: TimeInterval = tenSeconds) {
-    let result = self.loggerTasks.yieldAndWait(timeout: timeout)
+    let result = self.loggerTasks.wait(timeout: timeout)
     if result == .timedOut {
       self.error("Logger timed out before logging all messages")
     }

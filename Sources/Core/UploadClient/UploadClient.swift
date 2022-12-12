@@ -14,29 +14,39 @@ struct UploadClient {
     }
   }
 
+  private var logger: Logger?
   private var upload: (Trace) async throws -> Void
-  private var waitForUploads: (TimeInterval) -> Void
+  private let uploadTasks = DispatchGroup()
 
   init(
-    upload: @escaping (Trace) async throws -> Void,
-    waitForUploads: @escaping (TimeInterval) -> Void
+    logger: Logger?,
+    upload: @escaping (Trace) async throws -> Void
   ) {
+    self.logger = logger
     self.upload = upload
-    self.waitForUploads = waitForUploads
   }
 
   /// Uploads a trace.
   ///
   /// - Parameter trace: The trace to upload
-  func upload(trace: Trace) async throws {
-    try await self.upload(trace)
+  /// - Returns: A `Task` responsible for performing the upload.
+  @discardableResult
+  func upload(trace: Trace) -> Task<Void, Error> {
+    self.uploadTasks.enter()
+    return Task {
+      defer { self.uploadTasks.leave() }
+      try await self.upload(trace)
+    }
   }
 
   /// Waits synchronously for the previously submitted uploads to complete.
   ///
   /// - Parameter timeout: The maximum duration in seconds to wait for uploads to complete.
   func waitForUploads(timeout: TimeInterval = twoMinutes) {
-    self.waitForUploads(timeout)
+    let result = self.uploadTasks.wait(timeout: timeout)
+    if result == .timedOut {
+      self.logger?.error("Upload client timed out before completing all uploads")
+    }
   }
 }
 

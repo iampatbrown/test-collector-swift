@@ -14,13 +14,9 @@ extension UploadClient {
     runEnvironment: RunEnvironment,
     logger: Logger? = nil
   ) -> UploadClient {
-    let uploadTasks = DispatchGroup()
-
-    return UploadClient(
+    UploadClient(
+      logger: logger,
       upload: { trace in
-        uploadTasks.enter()
-        defer { uploadTasks.leave() }
-
         let testData = TestResults.json(runEnv: runEnvironment, data: [trace])
         logger?.debug("uploading \(testData)")
 
@@ -37,12 +33,6 @@ extension UploadClient {
         } catch {
           logger?.error("Failed to upload result, got error: \(error.localizedDescription)")
           throw error
-        }
-      },
-      waitForUploads: { timeout in
-        let result = uploadTasks.yieldAndWait(timeout: timeout)
-        if result == .timedOut {
-          logger?.error("Upload client timed out before completing all uploads")
         }
       }
     )
