@@ -7,7 +7,8 @@ extension DispatchGroup {
   /// - Returns: A result value indicating whether the method returned due to a timeout.
   func yieldAndWait(timeout: TimeInterval) -> DispatchTimeoutResult {
     self.enter()
-    DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 1) {
+    Task(priority: .background) {
+      await Task.yield()
       self.leave()
     }
     return self.wait(timeout: .now() + .milliseconds(Int(timeout * 1000)))
