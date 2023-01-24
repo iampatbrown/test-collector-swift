@@ -23,11 +23,11 @@ jobs:
 
     - name: build swift-format
       uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/swift-format/.build
-          key: ${{ runner.os }}-swift-format-${{ hashFiles('**/Package.resolved') }}
-          restore-keys: |
-            ${{ runner.os }}-swift-format-
+      with:
+        path: ${{ github.workspace }}/swift-format/.build
+        key: ${{ runner.os }}-swift-format-${{ hashFiles('**/Package.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-swift-format-
       run: |
         pushd ${{ github.workspace }}/swift-format
         swift build -c release
