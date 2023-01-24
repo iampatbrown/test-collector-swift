@@ -1,0 +1,50 @@
+name: Format
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  swift_format:
+    name: swift-format
+    runs-on: ubuntu-latest
+    container:
+      image: swift:5.7
+    steps:
+    - name: "⬇️ Checkout"
+      uses: actions/checkout@v2
+
+    - name: "⬇️ Checkout swift-format"
+      uses: actions/checkout@v2
+      with: 
+        repository: apple/swift-format
+        path: ${{ github.workspace }}/swift-format
+
+    - name: build swift-format
+      uses: actions/cache@v3
+          with:
+            path: ${{ github.workspace }}/swift-format/.build
+            key: ${{ runner.os }}-swift-format-${{ hashFiles('**/Package.resolved') }}
+            restore-keys: |
+              ${{ runner.os }}-swift-format-
+      run: |
+        pushd ${{ github.workspace }}/swift-format
+        swift build -c release
+        echo "::add-path::${PWD}/.build/release"
+        popd
+
+    - name: run swift-format
+      run: |
+        swift format \
+        --ignore-unparsable-files \
+        --in-place \
+        --recursive \
+        ./Examples ./Package.swift ./Sources ./Tests
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Run swift-format
+          branch: 'main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
